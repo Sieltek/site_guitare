@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="289a033b-9755-41f2-a66f-cfebb4f4fe34" name="Default Changelist" comment="Feat(guide_guitare): Add templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guide_guitare/templates/guide_guitare/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/guide_guitare/templates/guide_guitare/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guide_guitare/templates/guide_guitare/guitares.html" beforeDir="false" afterPath="$PROJECT_DIR$/guide_guitare/templates/guide_guitare/guitares.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +29,11 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -44,18 +46,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mapey\Desktop\Drive\Cours\Python\Django\site_guitare\site_guitare\guide_guitare\template\guide_guitare" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="site_guitare" type="Python.DjangoServer" factoryName="Django server">
@@ -94,6 +84,8 @@
       <updated>1579271768968</updated>
       <workItem from="1579271771422" duration="617000" />
       <workItem from="1579272624275" duration="4373000" />
+      <workItem from="1579896806514" duration="78000" />
+      <workItem from="1579896983673" duration="203000" />
     </task>
     <task id="LOCAL-00001" summary="Feat(site_guitare): Add routing">
       <created>1579273197040</created>
@@ -127,7 +119,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -139,5 +133,11 @@
     <MESSAGE value="Feat(site_guitare): Add statics" />
     <MESSAGE value="Feat(guide_guitare): Add templates" />
     <option name="LAST_COMMIT_MESSAGE" value="Feat(guide_guitare): Add templates" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579897183069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1579897183069" />
   </component>
 </project>
