@@ -15,5 +15,10 @@ class GuitareForm(forms.ModelForm):
             'user_guitare': forms.Select(attrs={'class': 'custom-file'}),
         }
         labels = {
-
+            'nom_guitare': "Nom de la guitare",
+            'type_guitare': "Type de la guitare",
+            'description_guitare': "Description",
+            'prix_guitare': "Prix",
+            'photo_guitare': "Photo de la guitare",
+            'user_guitare': "Déteneur",
         }
