@@ -1,14 +1,25 @@
 {% extends  'guide_guitare/base.html' %}
 {% block body %}
     <div class="container">
+        <h1>Liste des guitares : </h1>
         {% for item in items %}
-
-            <img src="{{ item.photo_guitare }}" alt=""><br>
-            {{ path }}/{{ item.photo_guitare }}<br>
-            {{ item.photo_guitare }}<br>
-            {{ item.nom_guitare }}<br>
-            {{ item.prix_guitare }}<br>
-            {{ item.description_guitare }}<br>
+            <div class="d-inline-flex border m-2" style="width: 350px; height: auto;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{ item.photo_guitare.url }}" class="card-img" width="auto" height="200" alt="{{ item.photo_guitare }}">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-text text-truncate" style="max-width: 300px;">{{ item.nom_guitare }}</h5>
+                            <p class="card-text text-truncate" style="max-width: 300px;">Type : {{ item.type_guitare }}</p>
+                            <p class="card-text text-truncate" style="max-width: 300px;">Prix : {{ item.prix_guitare }}€</p>
+                            <p class="card-text text-truncate" style="max-width: 300px;">Description : {{ item.description_guitare }}</p>
+                            <p class="card-text text-truncate" style="max-width: 300px;"><small class="text-muted">Déteneur : {{ item.user_guitare }}</small></p>
+                        </div>
+                        <a href="{% url 'guitares' item.id %}" class="btn btn-primary stretched-link">Modifier</a>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

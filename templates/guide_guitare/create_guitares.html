@@ -3,13 +3,50 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link" href="{% url 'index' %}">Accueil </a>
-            <a class="nav-item nav-link" href="{% url 'guitares' %}">Guitares</a>
             <a class="nav-item nav-link active" href="{% url 'create_guitare' %}">Ajouter une guitare <span class="sr-only">(current)</span></a>
         </div>
     </div>
 {% endblock %}
 {% block body %}
-    {% for field in form %}
-        {{field}}
-    {% endfor %}
+
+    <div class="container">
+        <h1>Créer une guitare : </h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.errors }}
+            <div class="row">
+                <div class="col-4">
+                    {{form.nom_guitare.label_tag}}
+                    {{form.nom_guitare}}
+                </div>
+                <div class="col-4">
+                    {{form.type_guitare.label_tag}}
+                    {{form.type_guitare}}
+                </div>
+                <div class="col-4">
+                    {{form.prix_guitare.label_tag}}
+                    {{form.prix_guitare}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {{form.description_guitare.label_tag}}
+                    {{form.description_guitare}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    {{form.photo_guitare.label_tag}}
+                    {{form.photo_guitare}}
+                </div>
+                <div class="col-6">
+                    {{form.user_guitare.label_tag}}
+                    {{form.user_guitare}}
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Ajouter</button>
+
+        </form>
+    </div>
 {% endblock %}
