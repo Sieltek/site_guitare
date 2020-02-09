@@ -1,15 +1,15 @@
 {% extends  'guide_guitare/base.html' %}
-
 {% block nav %}
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link" href="{% url 'index' %}">Accueil </a>
-            <a class="nav-item nav-link active" href="{% url 'guitares' %}">Guitares <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{% url 'guitares' %}">Guitares</a>
+            <a class="nav-item nav-link active" href="{% url 'create_guitare' %}">Ajouter une guitare <span class="sr-only">(current)</span></a>
         </div>
     </div>
 {% endblock %}
-
-
 {% block body %}
-    guitare
+    {% for field in form %}
+        {{field}}
+    {% endfor %}
 {% endblock %}

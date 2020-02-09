@@ -1,0 +1,14 @@
+{% extends  'guide_guitare/base.html' %}
+{% block body %}
+    <div class="container">
+        {% for item in items %}
+
+            <img src="{{ item.photo_guitare }}" alt=""><br>
+            {{ path }}/{{ item.photo_guitare }}<br>
+            {{ item.photo_guitare }}<br>
+            {{ item.nom_guitare }}<br>
+            {{ item.prix_guitare }}<br>
+            {{ item.description_guitare }}<br>
+        {% endfor %}
+    </div>
+{% endblock %}

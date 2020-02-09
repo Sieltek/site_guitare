@@ -20,6 +20,7 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="{% url 'index' %}">Accueil <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="{% url 'guitares' %}">Guitares</a>
+                <a class="nav-item nav-link" href="{% url 'create_guitare' %}">Ajouter une guitare</a>
             </div>
         </div>
     {% endblock %}
@@ -27,7 +28,7 @@
 </nav>
 {% block body %}
 {% endblock %}
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
