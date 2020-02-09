@@ -36,17 +36,19 @@ def guitares(request, id_guitare):
     except GuitareModel.DoesNotExist:
         raise Http404
 
-    if request.method == 'POST':
-        form = GuitareForm(request.POST, request.FILES, instance=item)
-        if form.is_valid() and 'modifier' in request.POST:
-            form.save()
-            return redirect(index)
-        elif 'supprimer' in request.POST:
-            item.delete()
-            return redirect(index)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = GuitareForm(request.POST, request.FILES, instance=item)
+            if form.is_valid() and 'modifier' in request.POST:
+                form.save()
+                return redirect(index)
+            elif 'supprimer' in request.POST:
+                item.delete()
+                return redirect(index)
+        else:
+            form = GuitareForm(instance=item)
     else:
-        form = GuitareForm(instance=item)
-
+        return redirect(connexion)
     return render(request, 'guide_guitare/guitares.html', {"item": item, 'form': form})
 
 
